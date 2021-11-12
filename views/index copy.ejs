@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Template EJS - Luz no nodejs</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/style.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>GUIA DO PROGRAMADOR</h1>
+    <p>NOME: <%= nome %></p>
+    <p>LINGUAGEM: <%= lang %></p>
+    <p>EMPRESA: <%= empresa %></p>
+    <p>INSCRITOS: <%= inscritos %></p>
+    <% if(msg){ %>
+    <p>CONSTA OBSERVAÇÕES NO SISTEMA</p>
+    <% }else{ %>
+    <p>NÃO CONSTA OBSERVAÇÕES</p>    
+    <% } %>
+    
+    <h2>LISTA DE PRODUTOS</h2>
+    <img src="/img/produt_quimico.png">
+    <% produtos.forEach(function(produto){ %>
+        <p>
+            <b>Nome:</b>&nbsp;<%= produto.nome %>
+            <b>Preço:</b>&nbsp;<%= produto.preco %>
+        </p>
+    <% }) %>
+</body>
+</html>
