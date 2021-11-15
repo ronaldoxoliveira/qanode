@@ -1,13 +1,16 @@
-<%- include('./partials/heards') %> <i class="fa fa-info-circle" aria-hidden="true"></i>
+<%- include('./partials/heards') %> 
+
     <div class="container">
+        
         <div class="card">
-            <div class="card-title">
-                <%= pergunta.titulo %>
-            </div>      
             <div class="card-body">
-                <%= pergunta.descricao %>
-            </div>
+                <h4 class="card-title"> <%= pergunta.titulo %></h4>
+                <h6 class="card-subtitle text-muted"><%= pergunta.descricao %></h6>
+              </div>
         </div>
+               
+           
+  
         <form method="post" action="/responder">
             <input type="hidden" name="perguntaId" value='<%= pergunta.id %>'>
             <div class="form-group">
