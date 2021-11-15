@@ -1,9 +1,9 @@
 <%- include('./partials/heards') %>
-<body>
-    <h1>USANDO O BOOTSTRAP NO PROJETO COM NODEJS</h1>
-
     <div class="container">
-        <a name="" id="" class="btn btn-primary" href="/perguntar" role="button">Perguntar</a>
+        <hr>
+        <h3>
+           LISTA DE PERGUNTAS E RESPOSTAS
+        </h3>
         <br><br>
         <% perguntas.forEach(pergunta =>{ %>
         <br>
@@ -22,11 +22,6 @@
                 </div>
             </div>
             <%})%>  
-        </div>
-       
-           
-           
-     
+        </div>   
     </div>
-</body>
-</html>
+<%- include('./partials/footer') %>
